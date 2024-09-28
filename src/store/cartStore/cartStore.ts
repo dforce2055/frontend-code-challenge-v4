@@ -1,5 +1,5 @@
 import { create } from 'zustand'
-import { useNotificationStore } from './notificationStore'
+import { useNotificationStore } from '../'
 
 interface CartItem {
   id: number

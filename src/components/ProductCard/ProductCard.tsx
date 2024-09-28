@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { useCartStore } from '../store/cartStore'
+import { useCartStore } from '../../store/cartStore/cartStore'
 import { PlusIcon } from '@heroicons/react/24/solid'
 
 interface ProductCardProps {
@@ -38,7 +38,6 @@ export default function ProductCard({ id, image, title, description, price, cate
           alt={title}
           width={100}
           height={100}
-          priority
         />
 
         <button 

@@ -5,10 +5,10 @@ import { useProducts } from '../hooks/useProducts'
 import { EyeIcon } from '@heroicons/react/24/solid'
 import { Transition } from '@headlessui/react'
 
-import ProductCard from '../components/ProductCard'
-import Header from '../components/Header'
-import Notification from '../components/Notification'
-import LoadingOverlay from '../components/LoadingOverlay'
+import ProductCard from '../components/ProductCard/ProductCard'
+import Header from '../components/Header/Header'
+import Notification from '../components/Notification/Notification'
+import LoadingOverlay from '../components/LoadingOverlay/LoadingOverlay'
 
 export default function Home() {
   const lastProductRef = useRef<HTMLDivElement>(null)

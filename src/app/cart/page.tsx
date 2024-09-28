@@ -1,7 +1,7 @@
 'use client'
 
-import { useCartStore } from '../../store/cartStore'
-import Header from '../../components/Header'
+import { useCartStore } from '../../store/cartStore/cartStore'
+import Header from '../../components/Header/Header'
 import Link from 'next/link'
 
 export default function CartPage() {

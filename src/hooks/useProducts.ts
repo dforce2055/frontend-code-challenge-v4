@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 'use client'
 
-import { useNotificationStore } from '@/store/notificationStore'
+import { useNotificationStore } from '../store'
 import { useState, useEffect, useCallback } from 'react'
 
 interface Product {

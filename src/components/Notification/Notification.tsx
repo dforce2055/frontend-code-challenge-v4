@@ -4,8 +4,7 @@ import { useState, useEffect } from 'react'
 import { Transition } from '@headlessui/react'
 import { CheckCircleIcon, InformationCircleIcon, XCircleIcon } from '@heroicons/react/24/outline'
 import { XMarkIcon } from '@heroicons/react/20/solid'
-import { useNotificationStore } from '../store/notificationStore'
-
+import { useNotificationStore } from '../../store'
 
 interface NotificationProps {
   message?: string

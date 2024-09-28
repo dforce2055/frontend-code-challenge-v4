@@ -1,11 +1,12 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import Image from 'next/image'
 import { useCallback, useEffect, useState } from 'react'
-import { useCartStore } from '../store/cartStore'
-import { debounce } from '../utils'
+import { useCartStore } from '../../store/cartStore/cartStore'
+import { debounce } from '../../utils'
 import { MagnifyingGlassIcon, ShoppingCartIcon } from '@heroicons/react/24/solid'
 
 import Link from 'next/link'
-import logo from '../../public/images/logo.svg'
+import logo from '../../../public/images/logo.svg'
 
 interface HeaderProps {
   onSearch?: (searchTerm: string) => void

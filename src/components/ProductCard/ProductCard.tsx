@@ -16,10 +16,10 @@ interface ProductCardProps {
 }
 
 enum CATEGORY {
-  ELECTRONICS = 'electronics',
-  JEWELERY = 'jewelery',
-  MEN_S_CLOTHING = 'men\'s clothing',
-  WOMEN_S_CLOTHING = 'women\'s clothing'
+  ELECTRONICS = "electronics",
+  JEWELERY = "jewelery",
+  MEN_S_CLOTHING = "men's clothing",
+  WOMEN_S_CLOTHING = "women's clothing"
 }
 
 export default function ProductCard({ id, image, title, description, price, category }: ProductCardProps) {
@@ -28,6 +28,22 @@ export default function ProductCard({ id, image, title, description, price, cate
   const handleAddToCart = () => {
     addItem({ id, name: title, price, quantity: 1 })
   }
+
+  const getCategoryColor = (category: CATEGORY | string) => {
+    switch (category) {
+      case CATEGORY.ELECTRONICS:
+        return 'bg-blue-500'
+      case CATEGORY.JEWELERY:
+        return 'bg-yellow-500'
+      case CATEGORY.MEN_S_CLOTHING:
+        return 'bg-green-500'
+      case CATEGORY.WOMEN_S_CLOTHING:
+        return 'bg-red-500'
+      default:
+        return 'bg-white'
+    }
+  }
+
 
   return (
     <div className="bg-white h-[496px] max-w-sm rounded-xl overflow-hidden shadow-lg hover:shadow-sm transition-shadow duration-300 ease-in-out group">
@@ -48,11 +64,8 @@ export default function ProductCard({ id, image, title, description, price, cate
         </button>
         <div
           className={
-            `absolute bottom-5 right-5 m-2 bg-white p-2 transition-colors duration-300 ease-in-out shadow-md group
-            ${ category === CATEGORY.ELECTRONICS ? 'bg-blue-500' :
-              category === CATEGORY.JEWELERY ? 'bg-yellow-500' :
-              category === CATEGORY.MEN_S_CLOTHING ? 'bg-green-500' : 'bg-red-500'
-            }`
+            `absolute bottom-5 right-5 m-2 p-2 transition-colors duration-300 ease-in-out shadow-md group
+            ${ getCategoryColor(category) }`
           }
         >
           <span className='text-gray-600 font-extrabold text-lg'>USD {price.toFixed(2)}</span>

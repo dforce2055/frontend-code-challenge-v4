@@ -15,13 +15,15 @@ interface HeaderProps {
 export default function Header({ onSearch }: HeaderProps) {
   const [searchTerm, setSearchTerm] = useState('')
   const { itemsCount, items } = useCartStore()
-
+  
   const debouncedSearch = useCallback(
-    debounce((term: string) => {
-      onSearch?.(term)
+    debounce((...args: unknown[]) => {
+      if (onSearch && args.length > 0 && typeof args[0] === 'string') {
+        onSearch(args[0]);
+      }
     }, 300),
     [onSearch]
-  )
+  );
 
   useEffect(() => {
     debouncedSearch(searchTerm)

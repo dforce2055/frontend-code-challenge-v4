@@ -6,6 +6,11 @@ This template should help get you started developing with Next.js.
 
 Visit => [Somnio Software](https://frontend-code-challenge-v4.vercel.app/)
 
+### Code quality 🧪
+
+Visit => [SonarQube](https://sonarcloud.io/summary/overall?id=dforce2055_frontend-code-challenge-v4)
+
+
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 

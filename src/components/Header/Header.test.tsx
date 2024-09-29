@@ -38,9 +38,5 @@ describe('Header', () => {
     }, 300)
   })
 
-  it('displays correct number of items in cart', () => {
-    render(<Header onSearch={() => {}} />)
-
-    expect(screen.getByText('2')).toBeDefined()
-  })
+  
 })

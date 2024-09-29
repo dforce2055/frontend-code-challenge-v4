@@ -12,9 +12,9 @@ export default function CartPage() {
   return (
     <div className=''>
       <Header onSearch={() => { }} />
-      <div className="flex flex-col h-screen mx-auto items-center p-4 w-9/12">
-        <h1 className="text-2xl text-gray-800 font-normal my-6 text-left w-9/12">Tu Carrito</h1>
-        <div className="bg-white rounded-lg p-10 mb-6 w-9/12 text-gray-800">
+      <div className="flex flex-col h-screen mx-auto items-center p-4 lg:w-9/12">
+        <h1 className="text-2xl text-gray-800 font-normal my-6 text-left lg:w-9/12">Tu Carrito</h1>
+        <div className="bg-white rounded-lg p-10 mb-6 lg:w-9/12 text-gray-800">
           {items.map(item => (
             <div key={item.id} className="flex justify-between items-center border-b py-2">
               <div className="flex items-center">
